@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season Clock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-container">
+            <div class="season-clock">
+                <!-- The clock background with colored segments -->
+                <div class="clock-face"></div>
+                
+                <!-- The hand of the clock -->
+                <div class="clock-hand"></div>
+                
+                <!-- Center dot of the clock -->
+                <div class="clock-center"></div>
+            </div>
+        </div>
+        
+        <!-- Information button (question mark) -->
+        <button id="info-button" class="info-button">?</button>
+    </div>
+    
+    <!-- Modal for information about the clock -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>About the Season Clock</h2>
+            <p>
+                This Season Clock is inspired by Scott Thrift's "The Present" project. 
+                It completes one full rotation per year, with the hand position indicating the current date.
+            </p>
+            <p>
+                The colors represent different seasons:
+            </p>
+            <ul>
+                <li><span class="color-sample winter"></span> Violet/blue for winter</li>
+                <li><span class="color-sample spring"></span> Green for spring</li>
+                <li><span class="color-sample summer"></span> Golden for summer</li>
+                <li><span class="color-sample fall"></span> Red for fall</li>
+            </ul>
+            <p>
+                This implementation was inspired by the version seen on 
+                <a href="https://leetusman.com/everyday/" target="_blank">leetusman.com</a>.
+            </p>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/clock.js') }}"></script>
+</body>
+</html>
